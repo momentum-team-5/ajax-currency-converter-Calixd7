@@ -1,4 +1,4 @@
-const currencies = [
+let currencies = [
   'EUR',
   'CAD',
   'HKD',
@@ -33,4 +33,17 @@ const currencies = [
   'KRW',
   'MYR'
 ]
+let url = 'https://exchangeratesapi.io/'
 
+let fromcurrencyEl = document.getElementById('fromcurrency');
+let fromammountEl = document.getElementById('fromammount');
+let tocurrencyEl = document.getElementById('tocurrency');
+let toammountEl = document.getElementById('toammount');
+let rateEl = document.getElementById('rate');
+let submitEl = document.getElementById('submit');
+ 
+fromcurrencyEl.addEventListener('change', calculate);
+fromammountEl.addEventListener('input', calculate);
+tocurrencyEl.addEventListener('change', calculate);
+toammountEl.addEventListener('input', calculate);
+ 
